@@ -1,6 +1,8 @@
 
 <head>
   <title>Members</title>
+  {% load staticfiles %}
+  <link rel="stylesheet" type="text/css" href="{% static 'members/memberstyle.css' %}" />
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -12,17 +14,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-{% load staticfiles %}
 <body>
   <h1>The Members of CCA are: </h1>
-
+  <div class="container">
   <div class="row">
     {% for member in all_member %}
-    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-      <img src='{{ member.pics.url }}' class="img-responsive" class="img-rounded" alt="{{member.name}}" />
+    <div id="image" class="col-lg-4 col-sm-6 col-xs-12">
+      <img src='{{ member.pics.url }}' class="img-thumbnail" class="img-responsive" alt="{{member.name}}" />
       <br>
-      {{member.name}}
+      NAME:{{member.name}}<br>
+      CELL:{{member.cell}}
     </div>
     {% endfor %}
+  </div>
   </div>
 </body>
