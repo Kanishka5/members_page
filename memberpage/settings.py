@@ -25,7 +25,7 @@ SECRET_KEY = '=e!$a3x1x%12gd!bq5m9f^5kpl-k_=qx765@xxc#0n@w_94^$x'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['five-learn.herokuapp.com']
 
 
 # Application definition
